@@ -1,0 +1,6 @@
+.idea
+.terraform
+*.test
+**/.terraform/*
+Vendor
+Gopkg*
