@@ -20,7 +20,7 @@ variable "machine_type" {
 }
 
 variable "zones" {
-  type        = "list"
+  type        = list(string)
   description = "GCP zone to rollout the image"
 }
 

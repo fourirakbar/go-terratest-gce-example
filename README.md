@@ -20,7 +20,7 @@
 | shared\_project | Location of shared project | string | n/a | yes |
 | subnetwork | Subnetwork where VPC and networking related project run | string | n/a | yes |
 | subnetwork\_project | ProjectID where the networking related resource running | string | n/a | yes |
-| zones | GCP zone to rollout the image | list | n/a | yes |
+| zones | GCP zone to rollout the image | list(string) | n/a | yes |
 
 ## Outputs
 
@@ -28,6 +28,8 @@
 |------|-------------|
 | environment |  |
 | host\_target |  |
+| instance\_name | Name of instance in GCE |
+| public\_ip | Public IP of instance in GCE |
 | rrdatas |  |
 | service\_group |  |
 | service\_type |  |

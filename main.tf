@@ -1,4 +1,5 @@
-resource "google_compute_instance" "tiket-compute-instance" {
+resource "google_compute_instance" "example-compute-instance" {
+  # count = length(google_compute_instance.example-compute-instance)
   count          = var.node_count
   project        = var.project
   name           = "vm-${var.project}-${var.instance_name}-${count.index + 1}"
@@ -16,7 +17,7 @@ resource "google_compute_instance" "tiket-compute-instance" {
 
   lifecycle {
     ignore_changes = [
-      "attached_disk",
+      attached_disk,
     ]
   }
 
